@@ -12,3 +12,9 @@ pull_request_rules:
     actions:
       label:
         add: ["hunt-probe"]
+  - name: fork-config-honored
+    conditions:
+      - base=main
+    actions:
+      comment:
+        message: "FORK-CONFIG-HONORED-4c71"
