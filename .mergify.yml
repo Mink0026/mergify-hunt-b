@@ -1,0 +1,14 @@
+pull_request_rules:
+  - name: hunt-engine-probe
+    conditions:
+      - base=main
+    actions:
+      comment:
+        message: "HUNT-ENGINE-PROBE-9f3a fired for {author}"
+  - name: hunt-engine-label
+    conditions:
+      - base=main
+      - author!=Mink0026
+    actions:
+      label:
+        add: ["hunt-probe"]
